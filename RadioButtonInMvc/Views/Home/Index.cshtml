@@ -1,0 +1,30 @@
+﻿
+@model RadioButtonInMvc.Models.TestRadiobutton
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Change", "Home", FormMethod.Post))
+{
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-6">
+                @Html.RadioButtonFor(m => m.Theme, "Dark")
+                <span>Dark Theme</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.RadioButtonFor(m => m.Theme, "Light")
+                <span>Light Theme</span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+            <label>@Html.DisplayFor(m => m.Theme)</label>
+        </div>
+    </div>
+
+    
+
+}
